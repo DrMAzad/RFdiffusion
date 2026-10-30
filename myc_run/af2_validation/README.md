@@ -48,3 +48,16 @@ column you filter on the same way.
 `parse_af2.py` writes a CSV ranked by `pae_interaction` (lower = better). Synthesize the
 designs that pass **all** filters AND keep a short Cys984-SG distance. Expect only a
 handful of the scan to survive — that is normal and the point of the filter.
+
+## Positive controls (Araújo et al. 2026, compounds 27 & 28)
+
+Compounds **27** (esterified prodrug) and **28** (prodrug + NLS) share one MYC-binding
+sequence — the 24-residue MAX-derived covalent lead **26** (clean 24-mer **24**:
+`EIDDLKREIALLEQEIRALEKAXA`, X = Dap(N-acrylamide) warhead → modeled as Ala). Use these
+as benchmarks: run `positive_controls.fasta` through the SAME AF2 step as the designs and
+require the designs to approach the controls' `pae_interaction`.
+
+CPU MM reference (`../control_assessment.csv`, native 1NKP pose, same pipeline as the AI
+peptides): compound 24/26 ΔE ≈ −33 kcal/mol, BSA ≈ 606 Å², 3.4 Å to Cys438; native MAX
+≈ −68.7 kcal/mol. The AI 6–8-mers score weaker in total (they bury far less surface) but
+match the controls' Cys438 warhead-reach geometry and exceed them in per-residue efficiency.

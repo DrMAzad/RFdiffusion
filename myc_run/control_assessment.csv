@@ -1,0 +1,3 @@
+control,length,sequence,dE_interaction_kcal_mol,buried_SASA_A2,interface_contacts,min_dist_to_Cys984_SG_A
+cmpd24_26 (paper),24,EIDDLKREIALLEQEIRALEKAAA,-33.02,606.0,107,3.44
+native_MAX,24,native_MAX,-68.74,706.5,161,3.44
